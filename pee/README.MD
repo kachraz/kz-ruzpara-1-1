@@ -3,7 +3,8 @@
 1. [pee](#pee)
 2. [Rovo Cli](#rovo-cli)
    1. [Commando - Smelling Woman Stink](#commando---smelling-woman-stink)
-3. [Dirza](#dirza)
+3. [GeminiCLI](#geminicli)
+4. [Dirza](#dirza)
 
 # pee
 
@@ -35,6 +36,12 @@ sudo apt install -y acli
 - Then need to get the API - https://id.atlassian.com/manage-profile/security/api-tokens
 - Then run - acli rovodev run
 - Then enjoy woman ass smells
+
+# GeminiCLI
+
+https://github.com/google-gemini/gemini-cli
+
+- followington this now izimg
 
 # Dirza
 

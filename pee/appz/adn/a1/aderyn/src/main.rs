@@ -1,4 +1,5 @@
 use std::path::PathBuf;
+use std::io::{self, Write};
 
 use aderyn::{
     aderyn_is_currently_running_newest_version, create_aderyn_toml_file_at,
@@ -257,7 +258,7 @@ async fn handle_gemini_analysis(root_path: &str, output_file: &str) {
     println!("Found and flattened contracts for project: {}", project_name);
     println!("Total code size: {} characters", flattened_code.len());
     
-    // Step 2: Get API credentials
+    // Step 2: Cost estimation
     let (api_key, model) = match gemini::prompt_for_api_credentials() {
         Ok(credentials) => credentials,
         Err(e) => {
@@ -265,6 +266,18 @@ async fn handle_gemini_analysis(root_path: &str, output_file: &str) {
             std::process::exit(1);
         }
     };
+    
+    let estimated_cost = gemini_config::estimate_cost(flattened_code.len(), &model);
+    println!("Estimated cost: {}", gemini_config::format_cost_estimate(estimated_cost));
+    
+    print!("Continue with analysis? (y/N): ");
+    io::stdout().flush().unwrap();
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).unwrap();
+    if !input.trim().to_lowercase().starts_with('y') {
+        println!("Analysis cancelled.");
+        return;
+    }
     
     // Step 3: Analyze with Gemini
     println!("\nSending code to Gemini AI for analysis...");

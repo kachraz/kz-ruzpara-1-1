@@ -28,3 +28,5 @@ termcolor = { workspace = true }
 tokio = { workspace = true, features = ["full"] }
 tower-lsp = { workspace = true }
 log = { workspace = true }
+rpassword = "7.3"
+chrono = { version = "0.4", features = ["serde"] }

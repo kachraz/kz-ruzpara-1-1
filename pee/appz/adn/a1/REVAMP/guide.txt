@@ -1,0 +1,5 @@
+# adding a new option to the CLi 
+
+I want to add a new option to the cli , 
+- that will flatten the contract into one file, then it will be sent to the Gemini APi for analysis 
+- After the gemini does the analysis the results should be in a markdown file with a heade that has the name of the project

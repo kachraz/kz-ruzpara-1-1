@@ -1,1 +1,3 @@
 # Rule to follow for Agents 
+
+I want to somehow add some LLM intelligence to this tool. But I am not sure how to do it

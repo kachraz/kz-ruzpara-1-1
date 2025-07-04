@@ -170,7 +170,11 @@ fn main() {
                 create_aderyn_toml_file_at(creation_path.to_string_lossy().to_string());
             }
             MainSubcommand::Docs { question } => {
-                birdsong(question);
+                // TODO: Implement docs functionality
+                println!("Docs functionality not yet implemented");
+                if let Some(q) = question {
+                    println!("Question: {}", q);
+                }
             }
             MainSubcommand::Gemini { output } => {
                 tokio::runtime::Runtime::new().unwrap().block_on(async {

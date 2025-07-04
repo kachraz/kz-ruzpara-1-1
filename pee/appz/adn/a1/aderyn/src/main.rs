@@ -1,7 +1,7 @@
 use std::path::PathBuf;
 
 use aderyn::{
-    aderyn_is_currently_running_newest_version, birdsong, create_aderyn_toml_file_at,
+    aderyn_is_currently_running_newest_version, create_aderyn_toml_file_at,
     initialize_niceties, lsp::spin_up_language_server, print_all_detectors_view, print_detail_view,
 };
 use aderyn_driver::driver::{self, kick_off_report_creation, Args};
@@ -9,6 +9,7 @@ use clap::{ArgGroup, Parser, Subcommand};
 use indoc::indoc;
 
 mod gemini;
+mod gemini_config;
 
 #[derive(Parser, Debug)]
 #[command(

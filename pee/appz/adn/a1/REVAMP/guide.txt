@@ -3,3 +3,6 @@
 I want to add a new option to the cli , 
 - that will flatten the contract into one file, then it will be sent to the Gemini APi for analysis 
 - After the gemini does the analysis the results should be in a markdown file with a heade that has the name of the project
+- When this new option is chosen, there should be a terminal prompt to enter the API key and choose the model 
+- This is the rough idea. Discuss and implement
+- Always make a report of what you have done under the directory REVAMP with the title actions performed with the date and time appended to it , so i know what was done

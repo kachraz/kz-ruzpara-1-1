@@ -43,9 +43,18 @@ https://github.com/google-gemini/gemini-cli
 
 - followington this now izimg
 
+```sh
+bun install -g @google/gemini-cli
+gemini
+
+# Then grap the authurl while making sure the gemini cli is running
+curl "<authurl>"
+```
+
 # Dirza
 
 |       Dir       |         Wah          |
 | :-------------: | :------------------: |
 | [`rov`](./rov/) | Workign with RovoCli |
 | [`ret`](./ret)  |     Testing Ret      |
+| [`gem`](./gem)  |       Gem Test       |

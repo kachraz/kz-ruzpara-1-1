@@ -167,7 +167,10 @@ fn main() {
                     None => PathBuf::from(&cmd_args.root),
                 };
 
-                create_aderyn_toml_file_at(creation_path.to_string_lossy().to_string());
+                if let Err(e) = create_aderyn_toml_file_at(&creation_path) {
+                    eprintln!("Error: {}", e);
+                    std::process::exit(1);
+                }
             }
             MainSubcommand::Docs { question } => {
                 birdsong(question);
@@ -183,25 +186,7 @@ fn main() {
     }
 
     if cmd_args.lsp {
-        let args = Args {
-            input_config: driver::CliArgsInputConfig {
-                root: cmd_args.root.clone(),
-                src: cmd_args.src.clone(),
-                path_excludes: cmd_args.path_excludes.clone(),
-                path_includes: cmd_args.path_includes.clone(),
-            },
-            output_config: driver::CliArgsOutputConfig {
-                output: cmd_args.output.clone(),
-                stdout: cmd_args.stdout,
-                no_snippets: cmd_args.no_snippets,
-            },
-            common_config: driver::CliArgsCommonConfig {
-                lsp: cmd_args.lsp,
-                skip_cloc: cmd_args.skip_cloc,
-                highs_only: cmd_args.highs_only,
-            },
-        };
-        spin_up_language_server(args);
+        spin_up_language_server();
         return;
     }
 

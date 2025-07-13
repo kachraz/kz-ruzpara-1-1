@@ -7,6 +7,6 @@
 
 # Dirz
 
-|                    Dir                    |    What     |
-| :---------------------------------------: | :---------: |
-| [`adn`](https://github.com/Cyfrin/aderyn) | aderyn tool |
+|                    Dir                    |        What         |
+| :---------------------------------------: | :-----------------: |
+| [`adn`](https://github.com/Cyfrin/aderyn) | aderyn tool testing |

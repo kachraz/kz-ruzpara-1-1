@@ -1,5 +1,5 @@
 Look thrugh the repository for TODO statements and 
-1. Find a simple task that can enhance the performance of the project 
+1. Find a simple task that can enhance the project either performance , chore or anything mentioned with TODO
 2. Do not delte anything , or reorganize any code blocks , only additions 
 3. Use guidance txts CLAUDE.md and CONTRIBUTING.MD 
 4. Before implementing show what change intends to be done- Store this output as a markdown file with todays date and time appended to the file name in a directory called REPZ. Mak the report and exit

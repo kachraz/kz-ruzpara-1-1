@@ -7,7 +7,8 @@
 
 # Dirz
 
-|                      Dir                       |        What         |
-| :--------------------------------------------: | :-----------------: |
-|   [`adn`](https://github.com/Cyfrin/aderyn)    | aderyn tool testing |
-| [`fou`](https://github.com/foundry-rs/foundry) |    foundry test     |
+|                      Dir                       | What |
+| :--------------------------------------------: | :--: |
+|   [`adn`](https://github.com/Cyfrin/aderyn)    | ader |
+| [`fou`](https://github.com/foundry-rs/foundry) | fouz |
+|  [`ret`](https://github.com/paradigmxyz/reth)  | rets |

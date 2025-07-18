@@ -9,4 +9,9 @@ https://github.com/paradigmxyz/reth
 # Dirz
 
 1. Important directory information
-2.
+2. From original the othere derived
+   1. Doing it like this since the target is 11GB
+
+|       Dir       |   What   |
+| :-------------: | :------: |
+| [`org`](./org/) | Original |
